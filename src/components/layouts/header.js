@@ -36,9 +36,6 @@ const Header = () => {
                     </NavLink>
                 </div>
             </div>
-            {/* <div className="container">
-                <Search />
-            </div> */}
         </div>
     );
 }

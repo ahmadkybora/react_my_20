@@ -158,30 +158,28 @@ export const I = ({ className, style=null }) => {
     )
 }
 
-export const Search = ({ onSubmit, type = [], name = [], className = [], id = [], value = [], placeholder, style=[] }) => {
+export const Search = ({ onSubmit, type, name, className, id, value, placeholder, style }) => {
     return (
-        <div>
+        <div className='flex justify-center'>
             <form onSubmit={onSubmit}>
-                <div className="">
+                <div className="input-group relative flex flex-wrap items-stretch w-full mb-4">
                     <div className="">
                         <Input 
-                            type={type[0]} 
-                            name={name[0]} 
-                            className={className[0]} 
-                            id={id[0]} 
-                            value={value[0]} 
+                            type={type} 
+                            name={name} 
+                            className={className} 
+                            id={id} 
+                            value={value} 
                             placeholder={placeholder} 
                             style={style}
                         />
                     </div>
-                        <Button 
-                            type={type[1]} 
-                            name={name[1]} 
-                            value={value[1]} 
-                            className={className[1]} 
-                            id={id[1]}
-                            style={style}
-                        />
+                    <button 
+                        className="bg-green-500 border rounded w-9">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                    </button>
                 </div>
             </form>
         </div>

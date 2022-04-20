@@ -16,12 +16,7 @@ function App() {
         <React.Fragment>
           <ToastContainer />
           <Navbar />
-          <main className="container-fluid">
-            {/* <Switch>
-              <Route path="/" exact component={Home} />
-              <LogoutRoute path="/login" component={Login} />
-              <LogoutRoute path="/register" component={Register} />
-            </Switch> */}
+          <main className="rounded">
 
           {routes.map(route => (
             <Route key={route.path} exact path={route.path} component={route.component} />
